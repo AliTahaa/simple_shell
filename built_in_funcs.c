@@ -69,9 +69,9 @@ void print_env(char **command, int status)
 	int i;
 	(void)status;
 
-	for (i = 0; enviro[i]; i++)
+	for (i = 0; environ[i]; i++)
 	{
-		write(STDOUT_FILENO, enviro[i], _strlen(enviro[i]));
+		write(STDOUT_FILENO, environ[i], _strlen(environ[i]));
 		write(STDOUT_FILENO, "\n", 1);
 	}
 	free_arr(command);

@@ -12,7 +12,7 @@
 #include <fcntl.h>
 
 #define DELIMITER " \t\n"
-extern char **enviro;
+extern char **environ;
 
 char *read_all(void);
 char **split_line(char *line);

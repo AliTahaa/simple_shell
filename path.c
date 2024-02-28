@@ -10,9 +10,9 @@ char *_get_enviro(char *variable)
 	char *tmp, *key, *value, *env;
 	int i;
 
-	for (i = 0; enviro[i]; i++)
+	for (i = 0; environ[i]; i++)
 	{
-		tmp = _strdup(enviro[i]);
+		tmp = _strdup(environ[i]);
 		key = strtok(tmp, "=");
 		if (_strcmp(key, variable) == 0)
 		{

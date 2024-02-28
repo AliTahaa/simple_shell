@@ -24,7 +24,7 @@ int _run(char **command, char **argv, int index)
 	child = fork();
 	if (child == 0)
 	{
-		if (execve(all_command, command, enviro) == -1)
+		if (execve(all_command, command, environ) == -1)
 		{
 			free(all_command), all_command = NULL;
 			free_arr(command);
